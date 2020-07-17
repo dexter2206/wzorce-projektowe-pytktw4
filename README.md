@@ -58,7 +58,10 @@
    Zrealizować to zadanie używając opcjonalnych parametrów.
 
    Opcjoalnie: zrealizować to w "obiektowej" wersji i porównać wygodę użycia jednego i drugiego rozwiązania.
+3. Metoda fabryczna.
 
+   Dopisać do zaimplementowanej w poprzednim zadaniu klasy metodę klasową `from_string`, umożliwiającą uworzenie instancji z łańcucha znaków.
+   
 3. Adapter
 
    Napisaliśmy aplikację, któ©a potrafi wykonywać pewne operacje sieciowe.
