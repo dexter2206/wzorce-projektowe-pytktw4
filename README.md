@@ -73,7 +73,7 @@
        def connect(self, address, port):
            pass
 
-       def send(message: str):
+       def send(self, message: str):
            pass
 	     
        def disconnect(self):
@@ -104,10 +104,10 @@
         def open_connection(self, host):
             pass
             
-        def write(data: bytes):
+        def write(self, data: bytes):
             pass
             
-        def close_connection():
+        def close_connection(self):
             pass
     ```
     Naszym zadaniem jest napisanie adapter do klasy `TCPClient` tak, aby możliwe było jej użycie w naszej aplikacji.
