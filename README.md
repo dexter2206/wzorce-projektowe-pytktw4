@@ -70,17 +70,14 @@
    ```python
    class Client(Protocol):
 
-       def __init__(self, address, port):
+       def connect(self, address, port):
            pass
-           
-       def connect():
-	         pass
 
-	     def send(message: str):
-	         pass
+       def send(self, message: str):
+           pass
 	     
-	     def disconnect():
-	         pass
+       def disconnect(self):
+           pass
 
    ```
 
@@ -92,8 +89,8 @@
        def __init__(self, client: Client):
            self.client = client
            
-       def send_message(self, messages: Iterable[str]):
-           self.client.connect()
+       def send_message(self, address, port, messages: Iterable[str]):
+           self.client.connect(address, port)
            for message in messages:
                self.client.send(message)
            self.client.disconnect()
@@ -103,17 +100,14 @@
     
     ```python
     class TCPClient:
-    
-        def __init__(self, host: str): # host to napis postaci adres:port
+ 
+        def open_connection(self, host):
             pass
             
-        def open_connection():
+        def write(self, data: bytes):
             pass
             
-        def write(data: bytes):
-            pass
-            
-        def close_connection():
+        def close_connection(self):
             pass
     ```
     Naszym zadaniem jest napisanie adapter do klasy `TCPClient` tak, aby możliwe było jej użycie w naszej aplikacji.
